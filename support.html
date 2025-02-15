@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术支持 - Do</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #333;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2196F3;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .language-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #2196F3;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .faq-item h3 {
+            color: #1976D2;
+            margin-bottom: 10px;
+        }
+        .contact-info {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="language-switch">
+            <a href="#" onclick="toggleLanguage(event)">English / 中文</a>
+        </div>
+
+        <div class="zh">
+            <h1>技术支持</h1>
+            
+            <h2>常见问题</h2>
+            
+            <div class="faq-item">
+                <h3>如何添加新的待办事项？</h3>
+                <p>1. 点击主界面右下角的"+"按钮</p>
+                <p>2. 输入待办事项内容</p>
+                <p>3. 设置优先级（可选）</p>
+                <p>4. 点击确认添加</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>如何标记任务完成？</h3>
+                <p>1. 在任务列表中找到要完成的任务</p>
+                <p>2. 点击任务前的复选框</p>
+                <p>3. 任务会自动移至已完成列表</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>如何恢复已删除的任务？</h3>
+                <p>目前版本暂不支持恢复已删除的任务，请谨慎删除操作。我们建议：</p>
+                <ul>
+                    <li>删除前确认是否真的需要删除</li>
+                    <li>如果不确定，可以先将任务标记为完成</li>
+                </ul>
+            </div>
+
+            <div class="contact-info">
+                <h2>联系我们</h2>
+                <p>如果您遇到其他问题或需要帮助，请通过以下方式联系我们：</p>
+                <p>邮箱：943062710@qq.com</p>
+                <p>我们会在24小时内回复您的问题。</p>
+            </div>
+        </div>
+
+        <div class="en" style="display: none;">
+            <h1>Technical Support</h1>
+            
+            <h2>FAQ</h2>
+            
+            <div class="faq-item">
+                <h3>How to add a new to-do item?</h3>
+                <p>1. Click the "+" button in the bottom right corner</p>
+                <p>2. Enter the to-do item content</p>
+                <p>3. Set priority (optional)</p>
+                <p>4. Confirm to add</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How to mark a task as completed?</h3>
+                <p>1. Find the task in the task list</p>
+                <p>2. Click the checkbox in front of the task</p>
+                <p>3. The task will automatically move to the completed list</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How to recover deleted tasks?</h3>
+                <p>The current version does not support recovering deleted tasks. We recommend:</p>
+                <ul>
+                    <li>Confirm if you really need to delete before deleting</li>
+                    <li>If unsure, mark the task as completed instead</li>
+                </ul>
+            </div>
+
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>If you encounter other issues or need help, please contact us:</p>
+                <p>Email: 943062710@qq.com</p>
+                <p>We will respond to your questions within 24 hours.</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link zh">返回主页</a>
+        <a href="index.html" class="back-link en" style="display: none;">Back to Home</a>
+    </div>
+
+    <script>
+        function toggleLanguage(event) {
+            event.preventDefault();
+            const zhElements = document.querySelectorAll('.zh');
+            const enElements = document.querySelectorAll('.en');
+            
+            zhElements.forEach(el => {
+                el.style.display = el.style.display === 'none' ? 'block' : 'none';
+            });
+            
+            enElements.forEach(el => {
+                el.style.display = el.style.display === 'none' ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html> 
